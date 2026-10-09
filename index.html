@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OPHATXERA — Tecnologia para começar</title>
+  <meta name="description" content="OPHATXERA é uma empresa de tecnologia em Cuamba, Niassa: desenvolvimento web, mobile e desktop, CCTV, instalação Starlink, consultoria de TI, venda de hardware e software próprio (yPOS, GuleraGym, ERP).">
+  <meta property="og:title" content="OPHATXERA — Tecnologia para começar">
+  <meta property="og:description" content="Software, serviços informáticos e equipamentos em Cuamba, Niassa.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#15803d">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+
+  <!-- Tema escolhido antes do primeiro desenho, para não piscar -->
+  <script>
+    try {
+      var t = localStorage.getItem('ophatxera:theme');
+      if (t) document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Fundo de pontos: grelha base + pontos que acendem à volta do cursor -->
+<div class="dots" aria-hidden="true"><div class="dots__glow"></div></div>
+
+<header class="header" id="top">
+  <a class="brand" href="#top" aria-label="OPHATXERA — início">
+    <span class="brand-mark"><img src="assets/logo.svg" alt="" width="36" height="36"></span>
+    <span class="brand-text"><strong>OPHATXERA</strong><span>Tecnologia · Cuamba</span></span>
+  </a>
+  <nav class="nav" id="menu">
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#loja">Loja</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <a class="btn btn-primary btn-sm header-cta" href="#contacto"><span class="mdi mdi-message-text-outline" aria-hidden="true"></span>Fale connosco</a>
+  <button class="icon-btn theme-btn" type="button" aria-label="Mudar tema"><span class="mdi mdi-weather-night" aria-hidden="true"></span></button>
+  <button class="icon-btn menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span class="mdi mdi-menu" aria-hidden="true"></span></button>
+</header>
+
+<main class="page">
+
+  <!-- CAPA -->
+  <section class="sheet cover-sheet">
+    <div class="cover">
+      <div>
+        <div class="eyebrow">Ophatxera · “começar” em Emakua</div>
+        <h1>Tecnologia para <em>começar</em> e fazer crescer o seu negócio.</h1>
+        <p class="cover-lead">Desenvolvemos software web, mobile e desktop, instalamos e mantemos a sua infraestrutura de TI e fornecemos os equipamentos certos — a partir de Cuamba, Niassa, para todo Moçambique.</p>
+        <div class="cover-meta">
+          <span><span class="mdi mdi-code-braces" aria-hidden="true"></span>Software à medida</span>
+          <span><span class="mdi mdi-cctv" aria-hidden="true"></span>CCTV &amp; Starlink</span>
+          <span><span class="mdi mdi-laptop" aria-hidden="true"></span>Hardware com garantia</span>
+          <span><span class="mdi mdi-map-marker-outline" aria-hidden="true"></span>Cuamba, Niassa</span>
+        </div>
+        <div class="cover-actions">
+          <a class="btn btn-primary" href="#contacto"><span class="mdi mdi-rocket-launch-outline" aria-hidden="true"></span>Pedir orçamento</a>
+          <a class="btn btn-ghost" href="#produtos"><span class="mdi mdi-apps" aria-hidden="true"></span>Ver os produtos</a>
+        </div>
+      </div>
+
+      <!-- Telemóvel com uma réplica simplificada do yPOS -->
+      <figure class="demo-fig" aria-hidden="true">
+        <div class="demo-tag"><span>yPOS</span><b>● Ao vivo</b></div>
+        <div class="phone">
+          <div class="ph-screen">
+            <div class="a-status"><span>09:41</span><span><span class="mdi mdi-signal"></span><span class="mdi mdi-wifi"></span><span class="mdi mdi-battery"></span></span></div>
+            <div class="a-header"><span class="mdi mdi-menu"></span><b>Vender</b><span class="mdi mdi-magnify"></span></div>
+            <div class="a-body">
+              <div class="a-kpi">
+                <small>Vendas de hoje</small>
+                <strong class="mono" id="kpi">48 250,00 MT</strong>
+                <span class="a-up"><span class="mdi mdi-trending-up"></span>+12% que ontem</span>
+              </div>
+              <div class="a-chips"><span class="on">Todos</span><span>Bebidas</span><span>Mercearia</span></div>
+              <ul class="a-list">
+                <li><span class="a-ico mdi mdi-bottle-soda-outline"></span><span><b>Refresco 2L</b><small>Stock: 24</small></span><em class="mono">120,00</em></li>
+                <li><span class="a-ico mdi mdi-rice"></span><span><b>Arroz 5kg</b><small>Stock: 12</small></span><em class="mono">450,00</em></li>
+                <li class="flash"><span class="a-ico mdi mdi-bread-slice-outline"></span><span><b>Pão de forma</b><small>Stock: 3</small></span><em class="mono">85,00</em></li>
+                <li><span class="a-ico mdi mdi-water-outline"></span><span><b>Água 1,5L</b><small>Stock: 40</small></span><em class="mono">50,00</em></li>
+              </ul>
+            </div>
+            <div class="a-cart"><span><span class="mdi mdi-cart-outline"></span> 3 itens</span><b class="mono">655,00 MT</b></div>
+          </div>
+        </div>
+      </figure>
+    </div>
+
+    <ol class="day">
+      <li><span class="day-dot"><span class="mdi mdi-ear-hearing" aria-hidden="true"></span></span><span class="day-when">Ouvir</span><span class="day-what">Entendemos o seu negócio</span></li>
+      <li><span class="day-dot"><span class="mdi mdi-file-document-edit-outline" aria-hidden="true"></span></span><span class="day-when">Propor</span><span class="day-what">Solução, prazo e custo claros</span></li>
+      <li><span class="day-dot"><span class="mdi mdi-hammer-wrench" aria-hidden="true"></span></span><span class="day-when">Executar</span><span class="day-what">Desenvolvemos e instalamos</span></li>
+      <li><span class="day-dot"><span class="mdi mdi-school-outline" aria-hidden="true"></span></span><span class="day-when">Formar</span><span class="day-what">A sua equipa aprende a usar</span></li>
+      <li><span class="day-dot"><span class="mdi mdi-headset" aria-hidden="true"></span></span><span class="day-when">Acompanhar</span><span class="day-what">Suporte técnico local</span></li>
+    </ol>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sheet" id="sobre">
+    <div class="ch-head">
+      <span class="ch-num">01</span>
+      <div class="eyebrow">Quem somos</div>
+      <h2>Um nome que é uma promessa.</h2>
+    </div>
+    <div class="about">
+      <div class="about-text">
+        <p><strong>Ophatxera</strong> significa <em>“começar”</em> em Emakua. É isso que fazemos: ajudamos empresas, instituições e empreendedores a dar o primeiro passo — e os seguintes — na transformação digital.</p>
+        <p>Somos uma empresa de tecnologia sediada em <strong>Cuamba, Niassa</strong>. Juntamos numa só equipa o desenvolvimento de software, a prestação de serviços informáticos e a venda de equipamentos, para que tenha um único parceiro de confiança, do projeto à manutenção.</p>
+        <ul class="plain-list">
+          <li>Soluções pensadas para a realidade moçambicana</li>
+          <li>Atendimento próximo e suporte técnico local</li>
+          <li>Software próprio, mantido e evoluído pela nossa equipa</li>
+        </ul>
+      </div>
+      <aside class="entry">
+        <div class="entry-head">
+          <span class="entry-word">ophatxera</span>
+          <span class="badge">Emakua</span>
+        </div>
+        <div class="entry-ipa mono">/o·pha·tʃe·ra/ · verbo</div>
+        <ol class="entry-defs">
+          <li>Começar; dar início a algo.</li>
+          <li><em>fig.</em> Empresa de tecnologia que ajuda os negócios a dar o primeiro passo no digital.</li>
+        </ol>
+        <div class="note tip">
+          <span class="mdi mdi-lightbulb-on-outline" aria-hidden="true"></span>
+          <div><span class="note-label">Missão</span><p>Tornar a tecnologia acessível e útil para quem trabalha no Niassa e em todo o país.</p></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="sheet" id="servicos">
+    <div class="ch-head">
+      <span class="ch-num">02</span>
+      <div class="eyebrow">Serviços</div>
+      <h2>Tudo o que o seu negócio precisa em tecnologia.</h2>
+      <p class="ch-lead">Da ideia à instalação, cuidamos de cada etapa — e continuamos presentes depois.</p>
+    </div>
+
+    <div class="block">
+      <div class="block-title"><span class="eyebrow">Software</span><h3>Desenvolvimento</h3></div>
+      <div class="kit">
+        <div class="kit-item"><span class="kit-icon mdi mdi-web" aria-hidden="true"></span><div><h4>Desenvolvimento Web</h4><p>Sites institucionais, lojas online, portais e sistemas web à medida.</p></div></div>
+        <div class="kit-item"><span class="kit-icon mdi mdi-cellphone" aria-hidden="true"></span><div><h4>Aplicações Mobile</h4><p>Apps Android e iOS para clientes, equipas de campo e gestão.</p></div></div>
+        <div class="kit-item"><span class="kit-icon mdi mdi-monitor" aria-hidden="true"></span><div><h4>Software Desktop</h4><p>Aplicações para Windows e Linux que funcionam mesmo sem internet estável.</p></div></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-title"><span class="eyebrow">Serviços informáticos</span><h3>Instalação &amp; suporte</h3></div>
+      <div class="kit">
+        <div class="kit-item"><span class="kit-icon mdi mdi-cctv" aria-hidden="true"></span><div><h4>CCTV &amp; Segurança</h4><p>Projeto, instalação e manutenção de videovigilância com acesso pelo telemóvel.</p></div></div>
+        <div class="kit-item"><span class="kit-icon mdi mdi-satellite-uplink" aria-hidden="true"></span><div><h4>Instalação Starlink</h4><p>Internet via satélite instalada, configurada e com Wi‑Fi para casa ou empresa.</p></div></div>
+        <div class="kit-item"><span class="kit-icon mdi mdi-lan" aria-hidden="true"></span><div><h4>Redes &amp; Servidores</h4><p>Cablagem estruturada, Wi‑Fi empresarial, servidores, backups e e‑mail profissional.</p></div></div>
+        <div class="kit-item"><span class="kit-icon mdi mdi-account-tie-outline" aria-hidden="true"></span><div><h4>Consultoria de TI</h4><p>Planeamento, digitalização de processos e segurança informática.</p></div></div>
+        <div class="kit-item"><span class="kit-icon mdi mdi-tools" aria-hidden="true"></span><div><h4>Assistência Técnica</h4><p>Reparação e manutenção de computadores, impressoras e periféricos.</p></div></div>
+        <div class="kit-item"><span class="kit-icon mdi mdi-school-outline" aria-hidden="true"></span><div><h4>Formação &amp; Suporte</h4><p>Formação das equipas e contratos de suporte contínuo.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="sheet" id="produtos">
+    <div class="ch-head">
+      <span class="ch-num">03</span>
+      <div class="eyebrow">Produtos próprios</div>
+      <h2>Software feito em Moçambique, para negócios moçambicanos.</h2>
+      <p class="ch-lead">Desenvolvidos, mantidos e suportados pela equipa OPHATXERA.</p>
+    </div>
+
+    <div class="products">
+      <article class="product" style="--p: var(--brand); --p-soft: var(--brand-soft)">
+        <div class="product-top">
+          <span class="product-icon mdi mdi-point-of-sale" aria-hidden="true"></span>
+          <span class="chip">Ponto de venda</span>
+        </div>
+        <h3>yPOS</h3>
+        <p>Ponto de venda simples e rápido para lojas, mercearias, farmácias e restaurantes. Vendas, stock, faturação e relatórios num só lugar.</p>
+        <ul class="ticks">
+          <li>Vendas rápidas e recibos</li>
+          <li>Controlo de stock e alertas</li>
+          <li>Relatórios de vendas e caixa</li>
+        </ul>
+        <a class="btn btn-primary" href="https://ypos.ophatxera.com" target="_blank" rel="noopener"><span class="mdi mdi-open-in-new" aria-hidden="true"></span>Visitar yPOS</a>
+      </article>
+
+      <article class="product" style="--p: var(--accent); --p-soft: var(--accent-soft)">
+        <div class="product-top">
+          <span class="product-icon mdi mdi-dumbbell" aria-hidden="true"></span>
+          <span class="chip">Ginásios</span>
+        </div>
+        <h3>GuleraGym</h3>
+        <p>Gestão completa do ginásio: membros, planos e mensalidades, pagamentos em atraso e a loja do ginásio integrada.</p>
+        <ul class="ticks">
+          <li>Membros e planos</li>
+          <li>Cobrança de mensalidades</li>
+          <li>Loja: suplementos e acessórios</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contacto" data-subject="Demonstração GuleraGym"><span class="mdi mdi-play-circle-outline" aria-hidden="true"></span>Pedir demonstração</a>
+      </article>
+
+      <article class="product" style="--p: var(--info); --p-soft: var(--info-soft)">
+        <div class="product-top">
+          <span class="product-icon mdi mdi-domain" aria-hidden="true"></span>
+          <span class="chip">Gestão empresarial</span>
+        </div>
+        <h3>OPHATXERA ERP</h3>
+        <p>ERP modular para controlar todas as áreas do negócio numa só plataforma, com suporte a várias empresas.</p>
+        <div class="modules">
+          <span>Vendas &amp; Pagamentos</span><span>Produtos &amp; Stock</span><span>Compras &amp; Fornecedores</span>
+          <span>Clientes</span><span>Financeira</span><span>Contabilidade</span><span>Contas a Pagar</span><span>Restaurante</span>
+        </div>
+        <a class="btn btn-ghost" href="#contacto" data-subject="Demonstração ERP"><span class="mdi mdi-play-circle-outline" aria-hidden="true"></span>Pedir demonstração</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- LOJA -->
+  <section class="sheet" id="loja">
+    <div class="ch-head">
+      <span class="ch-num">04</span>
+      <div class="eyebrow">Loja de informática</div>
+      <h2>Hardware e software com garantia e instalação.</h2>
+      <p class="ch-lead">Vendemos e configuramos os equipamentos que recomendamos — e damos assistência depois da compra.</p>
+    </div>
+
+    <div class="shop">
+      <div class="index-cols">
+        <div class="index-group">
+          <div class="eyebrow">Equipamentos</div>
+          <ol>
+            <li><span class="index-name"><span class="mdi mdi-laptop" aria-hidden="true"></span>Computadores e portáteis</span><span class="index-dots"></span><span class="index-num">HW</span></li>
+            <li><span class="index-name"><span class="mdi mdi-printer-outline" aria-hidden="true"></span>Impressoras e consumíveis</span><span class="index-dots"></span><span class="index-num">HW</span></li>
+            <li><span class="index-name"><span class="mdi mdi-cctv" aria-hidden="true"></span>Câmaras e kits CCTV</span><span class="index-dots"></span><span class="index-num">HW</span></li>
+            <li><span class="index-name"><span class="mdi mdi-satellite-variant" aria-hidden="true"></span>Kits Starlink e routers</span><span class="index-dots"></span><span class="index-num">HW</span></li>
+          </ol>
+        </div>
+        <div class="index-group">
+          <div class="eyebrow">Acessórios &amp; software</div>
+          <ol>
+            <li><span class="index-name"><span class="mdi mdi-router-network" aria-hidden="true"></span>Rede e UPS</span><span class="index-dots"></span><span class="index-num">HW</span></li>
+            <li><span class="index-name"><span class="mdi mdi-barcode-scan" aria-hidden="true"></span>Hardware POS</span><span class="index-dots"></span><span class="index-num">HW</span></li>
+            <li><span class="index-name"><span class="mdi mdi-shield-check-outline" aria-hidden="true"></span>Licenças e antivírus</span><span class="index-dots"></span><span class="index-num">SW</span></li>
+            <li><span class="index-name"><span class="mdi mdi-mouse" aria-hidden="true"></span>Periféricos</span><span class="index-dots"></span><span class="index-num">HW</span></li>
+          </ol>
+        </div>
+      </div>
+      <div class="note info">
+        <span class="mdi mdi-information-outline" aria-hidden="true"></span>
+        <div>
+          <span class="note-label">Cotação</span>
+          <p>Diga-nos o que precisa e enviamos uma proposta com preço, instalação e garantia.</p>
+          <a class="btn btn-primary btn-sm" href="#contacto" data-subject="Pedido de cotação de equipamentos"><span class="mdi mdi-cart-outline" aria-hidden="true"></span>Pedir cotação</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="sheet" id="contacto">
+    <div class="ch-head">
+      <span class="ch-num">05</span>
+      <div class="eyebrow">Contacto</div>
+      <h2>Pronto para começar? Vamos conversar.</h2>
+      <p class="ch-lead">Pedidos de orçamento, demonstrações ou suporte técnico — respondemos rapidamente.</p>
+    </div>
+
+    <div class="contact">
+      <ul class="contact-list">
+        <li><span class="task-icon mdi mdi-map-marker-outline" aria-hidden="true"></span><div><small>Localização</small><b>Cuamba, Niassa — Moçambique</b></div></li>
+        <li><span class="task-icon mdi mdi-phone-outline" aria-hidden="true"></span><div><small>Telefone</small><a href="tel:+258849460718">+258 84 946 0718</a></div></li>
+        <li><span class="task-icon mdi mdi-whatsapp" aria-hidden="true"></span><div><small>WhatsApp</small><a href="https://wa.me/258849460718" target="_blank" rel="noopener">Conversar agora</a></div></li>
+        <li><span class="task-icon mdi mdi-email-outline" aria-hidden="true"></span><div><small>Comercial</small><a href="mailto:info@ophatxera.com">info@ophatxera.com</a></div></li>
+        <li><span class="task-icon mdi mdi-lifebuoy" aria-hidden="true"></span><div><small>Suporte técnico</small><a href="mailto:suporte@ophatxera.com">suporte@ophatxera.com</a></div></li>
+      </ul>
+
+      <form class="form" id="contact-form" novalidate>
+        <div class="form-row">
+          <label>Nome<input name="nome" required autocomplete="name"></label>
+          <label>Telefone<input name="telefone" type="tel" autocomplete="tel"></label>
+        </div>
+        <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+        <label>Assunto
+          <select name="assunto" id="assunto">
+            <option>Pedido de orçamento</option>
+            <option>Desenvolvimento de software</option>
+            <option>CCTV / Starlink / Redes</option>
+            <option>Consultoria de TI</option>
+            <option>Demonstração yPOS</option>
+            <option>Demonstração GuleraGym</option>
+            <option>Demonstração ERP</option>
+            <option>Pedido de cotação de equipamentos</option>
+            <option>Suporte técnico</option>
+          </select>
+        </label>
+        <label>Mensagem<textarea name="mensagem" rows="5" required></textarea></label>
+        <button class="btn btn-primary btn-block" type="submit"><span class="mdi mdi-send-outline" aria-hidden="true"></span>Enviar mensagem</button>
+        <p class="form-note" id="form-note" role="status">Ao enviar, abrimos o seu e-mail com a mensagem pronta.</p>
+      </form>
+    </div>
+
+    <footer class="sheet-foot">
+      <span>© <span id="year">2026</span> OPHATXERA · Cuamba, Niassa</span>
+      <span><a href="https://ypos.ophatxera.com" target="_blank" rel="noopener">yPOS</a> · GuleraGym · ERP</span>
+    </footer>
+  </section>
+</main>
+
+<a class="wa-float" href="https://wa.me/258849460718" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><span class="mdi mdi-whatsapp" aria-hidden="true"></span></a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
